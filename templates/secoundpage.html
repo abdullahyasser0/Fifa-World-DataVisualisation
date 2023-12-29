@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart with Flask and amCharts 5</title>
+    
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+
+    <script src="/static/coolPie.js" ></script>
+    <script src="/static/person.js" ></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+
+<body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+              <li class="nav-item ">
+                <a class="nav-link" href="{{ url_for('index') }}">Global analysis</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('secoundPage') }}">Players Analysis</a>
+              </li>
+            </ul>
+          </nav>
+          
+    <div >
+        <h2>Search for player name</h2>
+        <form class="form-inline" id="playerForm" method="post" onsubmit="fetchDataAndUpdateTable5(event),fetchDataAndUpdateTable6(event)">
+            <label for="firstname">First Name : </label>
+            
+            <input class="form-control" type="text" id="firstname" name="fname" placeholder="Name">
+            <button type="submit" class="btn btn-info">Search</button>
+        </form>
+        <div class="chart-SpecialLeftContainer">
+            <div id="coolPie" class="shadow"></div>
+            <div id="person" class="shadow"></div>
+        <a href="{{ url_for('secoundPage') }}" class="btn btn-primary active">search for another one</a>
+    </div>
+    </div>
+    
+
+    <ul class="pagination" >
+        <li class="page-item "><a class="page-link" href="{{ url_for('index') }}">Previous</a></li>
+        <li class="page-item "><a class="page-link" href="{{ url_for('index') }}">1</a></li>
+        <li class="page-item active "><a class="page-link" href="{{ url_for('secoundPage') }}">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+</body>

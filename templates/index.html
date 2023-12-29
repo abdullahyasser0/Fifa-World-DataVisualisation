@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart with Flask and amCharts 5</title>
+    
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="/static/charts.js" ></script>
+    <script src="/static/barChart.js" ></script>
+    <script src="/static/worldMap.js" ></script>
+    <script src="/static/pieChart.js" ></script>
+    <script src="/static/coolCol.js" ></script>
+    <script src="/static/coolPie.js" ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Global analysis</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{{ url_for('secoundPage') }}">Players Analysis</a>
+        </li>
+      </ul>
+  </nav>
+
+  
+    <div style="text-align: center;">
+    <h1 class="display-4">Number of players Around the world<span class="badge badge-secondary">New</span></h1>
+    </div>
+    <div id="section1" class="chart-midContainer">
+    <div id="ًworldMap" class="shadow"></div>
+  
+  
+
+  </div class="chart-leftContainer">
+    <h2>Number of players above 80 overall </h2>
+    <div  class="chart-container">
+      <div id="barChartDiv" class="shadow"></div>
+      <div id="pieChartDiv" class="shadow"> </div> 
+    </div>
+  </div>
+
+  
+  
+  <h2>Choose country</h2>
+  <form class="form-inline" id="countryForm" method="post" onsubmit="fetchDataAndUpdateTable4(event)">
+      <label for="countryName"> enter country : </label>
+      <input class="form-control" type="text" id="countryName" name="country" placeholder="Country">
+      <button type="submit" class="btn btn-info">Search</button>
+  </form>
+  <div style="margin: 10px;" id="coolCol"></div>
+
+  </div>
+  <ul class="pagination" >
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item "><a class="page-link" href="{{ url_for('secoundPage') }}">2</a></li>
+      <li class="page-item"><a class="page-link" href="{{ url_for('secoundPage') }}">Next</a></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(205, 205, 205);
+}
+
+.text-mid{
+    text-align: center;
+}
+
+.chart-leftContainer{
+    padding-left: 3%;
+}
+
+.chart-rightContainer{
+    padding-left:50%;
+    width: auto;
+    height: auto;
+}
+.chart-midContainer {
+    display: flex;
+    justify-content: space-between; 
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.chart-container {
+    display: flex;
+    justify-content: space-between; 
+    padding-right: 10%;
+    
+}
+#pieChartDiv {
+    width: 48%; 
+    height: 400px;
+    margin: 5px; 
+    background-color: rgb(255, 255, 255);
+}
+
+#barChartDiv {
+    width: 48%; 
+    height: 400px;
+    margin: 5px; 
+    background-color: rgb(255, 255, 255);
+
+}
+
+#ًworldMap{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+#coolCol {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+#coolPie {
+    width: 30%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+
+}
+.chart-SpecialLeftContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+#person{
+    width: 70%;
+    height: 400px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+.pagination li {
+    margin: 0 5px; /* Adjust the margin as needed */
+  }
+
