@@ -54,13 +54,14 @@
 
   
   
-  <h2>Choose country</h2>
+  <h2 style="margin: 10px;">Avarage position rating </h2>
   <form class="form-inline" id="countryForm" method="post" onsubmit="fetchDataAndUpdateTable4(event)">
-      <label for="countryName"> enter country : </label>
+      <label style="margin: 10px;" for="countryName"> enter country : </label>
       <input class="form-control" type="text" id="countryName" name="country" placeholder="Country">
       <button type="submit" class="btn btn-info">Search</button>
   </form>
   <div style="margin: 10px;" id="coolCol"></div>
+  <a href="{{ url_for('index') }}" class="btn btn-primary active">search for another one</a>
 
   </div>
   <ul class="pagination" >

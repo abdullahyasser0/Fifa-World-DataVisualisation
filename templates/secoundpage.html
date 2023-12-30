@@ -36,9 +36,9 @@
           </nav>
           
     <div >
-        <h2>Search for player name</h2>
+        <h2 style="margin: 10px;">Search for player name</h2>
         <form class="form-inline" id="playerForm" method="post" onsubmit="fetchDataAndUpdateTable5(event),fetchDataAndUpdateTable6(event)">
-            <label for="firstname">First Name : </label>
+            <label style="margin: 10px;" for="firstname">First Name : </label>
             
             <input class="form-control" type="text" id="firstname" name="fname" placeholder="Name">
             <button type="submit" class="btn btn-info">Search</button>
@@ -55,6 +55,5 @@
         <li class="page-item "><a class="page-link" href="{{ url_for('index') }}">Previous</a></li>
         <li class="page-item "><a class="page-link" href="{{ url_for('index') }}">1</a></li>
         <li class="page-item active "><a class="page-link" href="{{ url_for('secoundPage') }}">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
 </body>
